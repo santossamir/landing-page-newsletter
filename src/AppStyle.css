@@ -1,0 +1,246 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+/*Início estilização do header*/
+.container-header{
+    top: 0px;
+    left: 0px;
+    width: 1500px;
+    height: 399px;
+    background: #707070 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-paragrafo-one p{
+    margin-top: 69px;
+    margin-bottom: 0;
+    height: 23px;
+    font: normal normal normal 20px/24px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.header-paragrafo-two p{
+    margin: 0;
+    font: normal normal bold 40px/49px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.header-paragrafo-three p{
+    margin-top: 24px;
+    margin-bottom: 50px;
+    font: normal normal normal 14px/16px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.header-button-seccions button{
+    margin-left: 40px;
+    width: 160px;
+    height: 40px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 6px #00000029;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    opacity: 1;
+    font: normal normal normal 14px/16px Helvetica Neue;
+    color: #888888;
+}
+/*Final estilização do header*/
+
+/* **Início estilização do body** */
+
+.container-body{
+    width: 1500px;
+}
+
+/*Início estilização sessão ajude o algorítimo*/
+.algorithm-help{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.divText-algorithm-help{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.divText-algorithm-help{
+    width: 520px;
+}
+
+.divForm-algorithm-help{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    font: normal normal normal 12px/14px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #888888;
+    opacity: 1;
+    margin-left: 60px;
+}
+
+.divTitle-algorithm-help{
+    height: 23px;
+    text-align: left;
+    font: normal normal normal 20px/24px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #888888;
+    opacity: 1; 
+    margin-top: 21px;
+    margin-bottom: 30px;
+}
+
+.divParagraphs-algorithm-help{
+    top: 473px;
+    left: 290px;
+    height: 220px;
+    width: 520px;
+    text-align: left;
+    font: normal normal normal 12px/18px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #888888;
+    opacity: 1;
+}
+
+.inputs-texts{
+    margin-top: 21px;
+}
+
+.inputs-texts input{
+    width: 340px;
+    height: 30px;
+}
+
+.divRadio{
+    height: 14px;
+    margin-top: 20px;
+    margin-bottom: 23px;
+    display:flex;
+    flex-direction: row;
+}
+
+.radioFem{
+    margin-left: 40px;
+}
+
+.divForm-algorithm-help button{
+    width: 100%;
+    height: 39px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    opacity: 1;
+}
+
+.input-email, .input-cpf{
+    margin-top: 20px;
+}
+
+.label-nome, .label-email, .label-cpf{
+    margin-bottom: 7px;
+}
+
+/*Final estilização sessão ajude o algorítimo*/
+
+/*Início da estilização sessão seleção especial*/
+.container-produtos{
+    width: 923px;
+    margin-left: 286px;
+    display:flex;
+    flex-direction: row;
+}
+ .div-produtos{
+     width: 200px;
+     height: 350px;
+     margin-right: 41px;
+ }
+
+ .div-img{
+    width: 200px;
+    height: 150px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    opacity: 1;
+ }
+
+ .div-nomeDoProduto{
+    font: normal normal normal 14px/16px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #888888;
+    opacity: 1;
+    margin-top: 14px;
+    margin-bottom: 0;
+ }
+
+ .div-descricaoDoProduto{
+    font: normal normal normal 12px/16px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #888888;
+    opacity: 1;
+    margin-top: 10px;
+ }
+
+ .div-valorDoProduto p {
+     margin: 0;
+ }
+
+ .div-valorDoProduto{
+    text-align: left;
+    font: normal normal bold 16px/16px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #888888;
+    opacity: 1;
+    margin-top: 6px;
+ }
+.div-valorDivido p {
+    margin: 0;
+}
+ .div-valorDivido{
+    font: normal normal normal 12px/16px Helvetica Neue;
+    letter-spacing: 0px;
+    color: #888888;
+    opacity: 1;
+    margin-top: 7px;
+ }
+
+ .div-produtos button{
+    width: 200px;
+    height: 30px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    opacity: 1;
+    margin-top: 10px;
+ }
+
+ .div-maisProdutos{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+ }
+
+ .div-maisProdutos button{
+    width: 260px;
+    height: 39px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    opacity: 1;
+    margin-top: 52px;
+ }
+
+/*Final da estilização sessão seleção especial*/
+
+/* **Final estilização do body** */
