@@ -295,15 +295,7 @@ export default class Body extends React.Component{
                         <button>Enviar agora</button>
                     </div>
                 </section>
-                <div className="div-footer">
-                    <div className="div-footer-texts">
-                        <p>Testantando suas habilidades em HTML, CSS e JS</p>
-                        <p>Linx Impulse</p>
-                        <p>2022</p>
-                    </div>
-                </div>
             </div>
-        
         )
     }
 }
