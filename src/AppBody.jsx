@@ -1,7 +1,23 @@
-import React from "react";
+import React,{Component} from "react";
 import "./AppStyle.css";
+import axios from 'axios';
 
 export default class Body extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            produtos: []
+        }
+    }
+    
+    componentDidMount() {
+        axios.get("https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1")
+        .then(resposta =>{
+            this.setState({produtos: resposta.data})
+            
+        })
+      }
+    
     render(){
         return(
             <div className="container-body">
@@ -70,210 +86,55 @@ export default class Body extends React.Component{
                             <button>Enviar</button>
                         </div>
                     </div>
-                </section>
+                </section> 
+
+                {/*Sessão 'seleção especial' de produtos*/} 
+                
+                {/*Início da sessão 'seleção especial' de produtos*/}
                 <section className="special-selection">
                     <div className="paragrafo-selec-especial">
                         <p><span className="p-span">Sua seleção especial</span></p>
                     </div>
                     <div className="container-produtos">
-                        
-                        <div className="div-produtos">
-                            <div className="div-img">
-                                <img/>
+                        {this.state.produtos.products?.map(item =>(
+                            <div className="div-produtos" key={item.id}>
+                                <div className="div-img">
+                                    <img src={item.image}/>
+                                </div>
+                                <div className="div-nomeDoProduto">
+                                    <p>{item.name}</p>
+                                </div>
+                                <div className="div-descricaoDoProduto">
+                                    <p>
+                                        {item.description}
+                                    </p>
+                                    <p style={{margin:"0"}}>De: R$ {item.oldPrice},00</p>
+                                </div>
+                                <div className="div-valorDoProduto">
+                                    <p>Por: R$ {item.price},00</p>
+                                </div>
+                                <div className="div-valorDivido">
+                                    <p>ou {item.installments.count}X de R$ {item.installments.value}0</p>
+                                </div>
+                                <button>Comprar</button>
                             </div>
-                            <div className="div-nomeDoProduto">
-                                <p>Nome do produto</p>
-                            </div>
-                            <div className="div-descricaoDoProduto">
-                                <p>
-                                    Descrição do produto um pouco maior, com duas linhas
-                                    ou três que explica do que se trata.
-                                </p>
-                                <p style={{margin:"0"}}>De: R$ 23,99</p>
-                            </div>
-                            <div className="div-valorDoProduto">
-                                <p>Por: R$ 19,99</p>
-                            </div>
-                            <div className="div-valorDivido">
-                                <p>ou 2X de R$ 9,99</p>
-                            </div>
-                            <button>Comprar</button>
-                        </div>
-
-                        <div className="div-produtos">
-                            <div className="div-img">
-                                <img/>
-                            </div>
-                            <div className="div-nomeDoProduto">
-                                <p>Nome do produto</p>
-                            </div>
-                            <div className="div-descricaoDoProduto">
-                                <p>
-                                    Descrição do produto um pouco maior, com duas linhas
-                                    ou três que explica do que se trata.
-                                </p>
-                                <p style={{margin:"0"}}>De: R$ 23,99</p>
-                            </div>
-                            <div className="div-valorDoProduto">
-                                <p>Por: R$ 19,99</p>
-                            </div>
-                            <div className="div-valorDivido">
-                                <p>ou 2X de R$ 9,99</p>
-                            </div>
-                            <button>Comprar</button>
-                        </div>
-
-                        <div className="div-produtos">
-                            <div className="div-img">
-                                <img/>
-                            </div>
-                            <div className="div-nomeDoProduto">
-                                <p>Nome do produto</p>
-                            </div>
-                            <div className="div-descricaoDoProduto">
-                                <p>
-                                    Descrição do produto um pouco maior, com duas linhas
-                                    ou três que explica do que se trata.
-                                </p>
-                                <p style={{margin:"0"}}>De: R$ 23,99</p>
-                            </div>
-                            <div className="div-valorDoProduto">
-                                <p>Por: R$ 19,99</p>
-                            </div>
-                            <div className="div-valorDivido">
-                                <p>ou 2X de R$ 9,99</p>
-                            </div>
-                            <button>Comprar</button>
-                        </div>
-
-                        <div className="div-produtos">
-                            <div className="div-img">
-                                <img/>
-                            </div>
-                            <div className="div-nomeDoProduto">
-                                <p>Nome do produto</p>
-                            </div>
-                            <div className="div-descricaoDoProduto">
-                                <p>
-                                    Descrição do produto um pouco maior, com duas linhas
-                                    ou três que explica do que se trata.
-                                </p>
-                                <p style={{margin:"0"}}>De: R$ 23,99</p>
-                            </div>
-                            <div className="div-valorDoProduto">
-                                <p>Por: R$ 19,99</p>
-                            </div>
-                            <div className="div-valorDivido">
-                                <p>ou 2X de R$ 9,99</p>
-                            </div>
-                            <button>Comprar</button>
-                        </div>
-                    </div>
-                    <div className="container-produtos">
-                        
-                        <div className="div-produtos">
-                            <div className="div-img">
-                                <img/>
-                            </div>
-                            <div className="div-nomeDoProduto">
-                                <p>Nome do produto</p>
-                            </div>
-                            <div className="div-descricaoDoProduto">
-                                <p>
-                                    Descrição do produto um pouco maior, com duas linhas
-                                    ou três que explica do que se trata.
-                                </p>
-                                <p style={{margin:"0"}}>De: R$ 23,99</p>
-                            </div>
-                            <div className="div-valorDoProduto">
-                                <p>Por: R$ 19,99</p>
-                            </div>
-                            <div className="div-valorDivido">
-                                <p>ou 2X de R$ 9,99</p>
-                            </div>
-                            <button>Comprar</button>
-                        </div>
-
-                        <div className="div-produtos">
-                            <div className="div-img">
-                                <img/>
-                            </div>
-                            <div className="div-nomeDoProduto">
-                                <p>Nome do produto</p>
-                            </div>
-                            <div className="div-descricaoDoProduto">
-                                <p>
-                                    Descrição do produto um pouco maior, com duas linhas
-                                    ou três que explica do que se trata.
-                                </p>
-                                <p style={{margin:"0"}}>De: R$ 23,99</p>
-                            </div>
-                            <div className="div-valorDoProduto">
-                                <p>Por: R$ 19,99</p>
-                            </div>
-                            <div className="div-valorDivido">
-                                <p>ou 2X de R$ 9,99</p>
-                            </div>
-                            <button>Comprar</button>
-                        </div>
-
-                        <div className="div-produtos">
-                            <div className="div-img">
-                                <img/>
-                            </div>
-                            <div className="div-nomeDoProduto">
-                                <p>Nome do produto</p>
-                            </div>
-                            <div className="div-descricaoDoProduto">
-                                <p>
-                                    Descrição do produto um pouco maior, com duas linhas
-                                    ou três que explica do que se trata.
-                                </p>
-                                <p style={{margin:"0"}}>De: R$ 23,99</p>
-                            </div>
-                            <div className="div-valorDoProduto">
-                                <p>Por: R$ 19,99</p>
-                            </div>
-                            <div className="div-valorDivido">
-                                <p>ou 2X de R$ 9,99</p>
-                            </div>
-                            <button>Comprar</button>
-                        </div>
-
-                        <div className="div-produtos">
-                            <div className="div-img">
-                                <img/>
-                            </div>
-                            <div className="div-nomeDoProduto">
-                                <p>Nome do produto</p>
-                            </div>
-                            <div className="div-descricaoDoProduto">
-                                <p>
-                                    Descrição do produto um pouco maior, com duas linhas
-                                    ou três que explica do que se trata.
-                                </p>
-                                <p style={{margin:"0"}}>De: R$ 23,99</p>
-                            </div>
-                            <div className="div-valorDoProduto">
-                                <p>Por: R$ 19,99</p>
-                            </div>
-                            <div className="div-valorDivido">
-                                <p>ou 2X de R$ 9,99</p>
-                            </div>
-                            <button>Comprar</button>
-                        </div>
-                    </div>
+                            ))
+                        }
+                    </div>  {/*Final da sessão 'seleção especial' de produtos*/}  
                     
                     <div className="div-maisProdutos">
                         <button>Ainda mais produtos aqui!</button>
                     </div>
-                </section>
+                </section> {/* Final - Sessão 'seleção especial' de produtos*/} 
+
+                {/*Início da sessão compartilhe a novidade*/} 
                 <section className="compartilhe-novidade">
                     <div className="title-comp-novidades">
                         <p><span className="p-span">Compartilhe a novidade</span></p>
                     </div>
                     <div className="paragraph-comp-novidades">
-                        <p>Quer que seus amigos também ganhem a lista personalizada deles?
+                        <p>
+                            Quer que seus amigos também ganhem a lista personalizada deles?
                             Preencha agora!
                         </p>
                     </div>
@@ -294,7 +155,7 @@ export default class Body extends React.Component{
                     <div className="div-enviarAgora">
                         <button>Enviar agora</button>
                     </div>
-                </section>
+                </section>  {/*Final da sessão compartilhe a novidade*/} 
             </div>
         )
     }

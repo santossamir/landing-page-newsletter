@@ -156,11 +156,12 @@ body{
 
 /*Início da estilização sessão seleção especial*/
 .container-produtos{
-    width: 923px;
+    width: 980px;
     margin-left: 286px;
     display:flex;
     flex-direction: row;
     margin-top: 40px;
+    flex-wrap: wrap;
 }
 
 .paragrafo-selec-especial p, .title-comp-novidades p{
@@ -184,9 +185,10 @@ body{
      width: 200px;
      height: 350px;
      margin-right: 41px;
+     margin-bottom: 40px;
  }
 
- .div-img{
+ .div-img img{
     width: 200px;
     height: 150px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -257,7 +259,7 @@ body{
     border: 1px solid #707070;
     border-radius: 4px;
     opacity: 1;
-    margin-top: 52px;
+    margin-top: 12px;
  }
 
 /*Final da estilização sessão seleção especial*/
