@@ -20,14 +20,18 @@ export default class Body extends React.Component{
       }
 
     maisProdutos = () =>{   
-        axios.get("https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=2")
-        .then(resposta =>{
-            this.setState({produtosTwo: resposta.data})
-        })
+        if(!this.state.produtosTwo){
+            axios.get("https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=2")
+            .then(resposta =>{
+                this.setState({produtosTwo: resposta.data})
+            })
 
-        this.setState(showState => ({
-            produtosTwo: showState.produtosTwo 
-        }));
+            this.setState(showState => ({
+                produtosTwo: showState.produtosTwo 
+            }));
+        } else{
+            this.setState({produtosTwo: false})
+        }
     }
 
     enviarAgora = () =>{
