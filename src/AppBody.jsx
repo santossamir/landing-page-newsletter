@@ -109,11 +109,11 @@ export default class Body extends React.Component{
                             </div>
                             <div className="divRadio">
                                 <div>
-                                    <input type="radio"/>
+                                    <input type="radio" name="opcao" value="masculino"/>
                                     <label>Masculino</label>
                                 </div>
                                 <div className="radioFem">
-                                    <input type="radio"/>
+                                    <input type="radio" name="opcao" value="feminino"/>
                                     <label>Feminino</label>
                                 </div>
                             </div>
@@ -181,7 +181,7 @@ export default class Body extends React.Component{
                         }
                     </div>{/*Final da apresentação dos produtos - Parte II*/}
                     <div className="div-maisProdutos">
-                        <button onClick={this.maisProdutos}>{this.state.produtosTwo ? "Ver menos produtos." : "Mais produtos aqui!"}</button>
+                        <button onClick={this.maisProdutos}>{this.state.produtosTwo ? "Ver menos produtos" : "Mais produtos aqui"}</button>
                     </div>
                 </section>{/* Final - Sessão 'seleção especial' de produtos*/} 
                 {/*Início da sessão compartilhe a novidade*/} 

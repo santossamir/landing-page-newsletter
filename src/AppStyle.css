@@ -55,6 +55,13 @@ body{
     font: normal normal normal 14px/16px Helvetica Neue;
     color: #888888;
 }
+
+.header-button-seccions button:hover{
+    background:#888888;
+    color:#FFFFFF;
+    transition: 0.5s;
+
+}
 /*Final estilização do header*/
 
 /* **Início estilização do body** */
@@ -142,6 +149,12 @@ body{
     border: 1px solid #707070;
     border-radius: 4px;
     opacity: 1;
+}
+
+.divForm-algorithm-help button:hover{
+    background: #888888;
+    color: #FFFFFF;
+    transition: 0.5s;
 }
 
 .input-email, .input-cpf{
@@ -246,6 +259,12 @@ body{
     margin-top: 10px;
  }
 
+ .div-produtos button:hover{
+    background: #888888;
+    color: #FFFFFF;
+    transition: 0.5s;
+ }
+
  .div-maisProdutos{
     display:flex;
     flex-direction: row;
@@ -260,6 +279,12 @@ body{
     border-radius: 4px;
     opacity: 1;
     margin-top: 12px;
+ }
+
+ .div-maisProdutos button:hover{
+    background: #888888;
+    color: #FFFFFF;
+    transition: 0.5s;
  }
 
 /*Final da estilização sessão seleção especial*/
@@ -312,6 +337,12 @@ body{
     border-radius: 4px;
     opacity: 1;
     margin-top: 50px;
+}
+
+.compartilhe-novidade button:hover{
+    background: #888888;
+    color: #FFFFFF;
+    transition: 0.5s;
 }
 
 .div-enviarAgora{
