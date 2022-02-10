@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/landing-page-newsletter/static/css/main.d4205a22.css",
+    "main.js": "/landing-page-newsletter/static/js/main.9be00563.js",
+    "index.html": "/landing-page-newsletter/index.html",
+    "main.d4205a22.css.map": "/landing-page-newsletter/static/css/main.d4205a22.css.map",
+    "main.9be00563.js.map": "/landing-page-newsletter/static/js/main.9be00563.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d4205a22.css",
+    "static/js/main.9be00563.js"
+  ]
+}
