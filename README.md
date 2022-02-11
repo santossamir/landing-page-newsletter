@@ -1,3 +1,24 @@
+# landing-page-newsletter
+
+Esse projeto consiste no desenvolvimento do layout de uma landing page com uma grade de produtos e um
+formulário de newsletter. Com isso, fizemos a funcionalidade focado no ReactJS. Para preencher a página
+com as informações dos produtos, consultamos uma API de forma paginada, sendo que cada página consultada
+retorna as informações de 8 produtos e um link para a próxima página. Assim que obtemos os dados,
+implementamos, para cada produto retornado pela API, um card de produto com as respectivas informações
+apresentadas na grade; ao clicarmos no botão "Mais produtos aqui!" a próxima página da API é consultada,
+gerando mais 8 produtos na grade que já existe, abaixo dos produtos já carregados pela primeira requisição
+e quando clicamos no mesmo botão, só que agora como "Ver menos produtos", retornamos a primeira API
+carregada como no início; e o formulário de newsletter ("Compartilhe a novidade") tem seus campos de input
+validados de acordo com o conteúdo.
+
+![Captura de tela de 2022-02-10 21-40-36](https://user-images.githubusercontent.com/88064533/153520750-4a1c7c0b-9884-45ab-8fb8-645f900e70de.png)
+![Captura de tela de 2022-02-10 21-40-54](https://user-images.githubusercontent.com/88064533/153520807-3d16e645-b5e8-4ac4-98ba-51a7968cdcda.png)
+![Captura de tela de 2022-02-10 21-41-04](https://user-images.githubusercontent.com/88064533/153520854-c5c54139-10fd-49a4-a44c-f7afca2540bf.png)
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
