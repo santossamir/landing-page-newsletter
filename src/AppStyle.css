@@ -330,6 +330,13 @@ body{
     opacity: 1;
 }
 
+.div-mensagem-sucesso{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: green;
+}
+
 .compartilhe-novidade button{
     width: 260px;
     height: 39px;

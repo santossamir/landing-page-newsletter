@@ -1,5 +1,4 @@
 import React,{Component} from "react";
-import "./AppStyle.css";
 import axios from 'axios';
 
 export default class Body extends React.Component{
@@ -7,7 +6,10 @@ export default class Body extends React.Component{
         super(props);
         this.state = {
             produtos: [],
-            produtosTwo: false
+            produtosTwo: false,
+            valorInputNome: "",
+            valorInputEmail: "",
+            sucessEnvioEmail: false
         }
     }
     
@@ -34,20 +36,28 @@ export default class Body extends React.Component{
         }
     }
 
-    enviarAgora = () =>{
-        let nomeDoAmigo = document.querySelector("#inputNomeAmigo").value;
-        let emailDoAmigo = document.querySelector("#inputEmailAmigo").value;
+    nomeAmigo = (e) =>{
+        this.setState({valorInputNome: e.target.value})  
+    }
 
-        if(nomeDoAmigo === ""){
-            document.querySelector("#inputNomeAmigo").focus();
-        }else if(emailDoAmigo === ""){
-            document.querySelector("#inputEmailAmigo").focus();
-        } else if( emailDoAmigo.indexOf('@') == -1 || emailDoAmigo.indexOf('.com') == -1){
-            alert( "Por favor, informe um E-MAIL válido!" );
-            return false;
-        }else{
-            window.location.reload();
+    emailAmigo = (e) =>{
+        this.setState({ valorInputEmail: e.target.value})
+    }
+
+    enviarAgora = () =>{
+        let inputNome = this.state.valorInputNome;
+        let inputEmail = this.state.valorInputEmail;
+
+        if(inputNome === ""){
+            this.valorInputNome.focus();
+        } else if(inputEmail === ""){
+            this.valorInputEmail.focus();
+        } else if(this.state.valorInputEmail.indexOf('@') == -1 || this.state.valorInputEmail.indexOf('.com') == -1){
+            alert("Por favor, informe um E-MAIL válido!");
+        } else{
+            this.setState({sucessEnvioEmail: true})
         }
+        
     }
     
     render(){
@@ -196,20 +206,27 @@ export default class Body extends React.Component{
                         </p>
                     </div>
                     {/*Início sessão formulário*/}
-                        <div className="box-form-comp-novidades">
-                            <div className="box-form-nome">
-                                <div className="comp-novidades-form-nome">
-                                    <label>Nome do seu amigo:</label>
+                        {!this.state.sucessEnvioEmail &&
+                            <div className="box-form-comp-novidades">
+                                <div className="box-form-nome">
+                                    <div className="comp-novidades-form-nome">
+                                        <label>Nome do seu amigo:</label>
+                                    </div>
+                                    <input type="text" ref={(input) => { this.valorInputNome = input; }} value={this.state.valorInputNome} onChange={this.nomeAmigo} />
                                 </div>
-                                <input type="text" id="inputNomeAmigo"/>
-                            </div>
-                            <div className="box-form-email">
-                                <div className="comp-novidades-form-email">
-                                    <label>E-mail:</label>
+                                <div className="box-form-email">
+                                    <div className="comp-novidades-form-email">
+                                        <label>E-mail:</label>
+                                    </div>
+                                    <input type="text" ref={(input) => { this.valorInputEmail = input; }} value={this.state.valorInputEmail} onChange={this.emailAmigo} name="email" />
                                 </div>
-                                <input type="text" name="email" id="inputEmailAmigo"/>
                             </div>
-                        </div>
+                        }
+                        {this.state.sucessEnvioEmail &&
+                            <div className="div-mensagem-sucesso">
+                                <h3>E-mail enviado com sucesso!</h3>
+                            </div>
+                        }
                         <div className="div-enviarAgora">
                             <button onClick={this.enviarAgora}>Enviar agora</button>
                         </div>
